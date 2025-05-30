@@ -1,4 +1,4 @@
-# [speech-to-text-frontend-karim] - Speech-to-Text Frontend
+# speech-to-text-frontend-karim - Speech-to-Text Frontend
 
 ---
 
@@ -34,7 +34,7 @@ Follow these steps to get the frontend running on your local machine.
 1.  **Clone the repository:**
 
     ```bash
-    git clone [https://github.com/karimnaderr/speech-to-text-frontend]
+    git clone https://github.com/karimnaderr/speech-to-text-frontend
     cd speech-to-text-frontend
     ```
 
@@ -45,15 +45,7 @@ Follow these steps to get the frontend running on your local machine.
     # or yarn install
     ```
 
-3.  **Set up environment variables:**
-    Create a file named `.env` in the root of the `speech-to-text-frontend` directory. This tells your React app where your backend API is located.
-
-    ```dotenv
-    REACT_APP_API_BASE_URL="http://localhost:8000"
-    # IMPORTANT: When deploying, this value MUST be changed to your deployed backend API URL (e.g., [https://your-backend-api.onrender.com](https://your-backend-api.onrender.com))
-    ```
-
-4.  **Run the application:**
+3.  **Run the application:**
     ```bash
     npm start
     # or yarn start
