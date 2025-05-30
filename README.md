@@ -1,4 +1,4 @@
-# [Your Project Name] - Speech-to-Text Frontend
+# [speech-to-text-frontend-karim] - Speech-to-Text Frontend
 
 ---
 
@@ -34,7 +34,7 @@ Follow these steps to get the frontend running on your local machine.
 1.  **Clone the repository:**
 
     ```bash
-    git clone [Your Frontend GitHub Repo URL]
+    git clone [https://github.com/karimnaderr/speech-to-text-frontend]
     cd speech-to-text-frontend
     ```
 
