@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# [Your Project Name] - Speech-to-Text Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+## Project Description
 
-In the project directory, you can run:
+This is the user interface (frontend) for the Speech-to-Text application. It allows users to upload audio files, sends them to a backend API for transcription and sentiment analysis, and then displays the results in a clear and organized manner.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Audio File Upload:** Intuitive interface for selecting and uploading audio files (WAV, MP3, etc.).
+- **Real-time Transcription Display:** Shows the transcription and its status after processing.
+- **Sentiment Display:** Presents the sentiment (Positive, Negative, Neutral, N/A) of the transcribed text.
+- **History View:** Lists all previous transcriptions with their details.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+- **Frontend Framework:** React.js
+- **HTTP Client:** Axios
+- **Build Tool:** Create React App
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Local Setup & Installation
 
-### `npm run build`
+Follow these steps to get the frontend running on your local machine.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Node.js (LTS version recommended)
+- npm (Node Package Manager) or Yarn
+- Git
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Steps
 
-### `npm run eject`
+1.  **Clone the repository:**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    ```bash
+    git clone [Your Frontend GitHub Repo URL]
+    cd speech-to-text-frontend
+    ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2.  **Install dependencies:**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    ```bash
+    npm install
+    # or yarn install
+    ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3.  **Set up environment variables:**
+    Create a file named `.env` in the root of the `speech-to-text-frontend` directory. This tells your React app where your backend API is located.
 
-## Learn More
+    ```dotenv
+    REACT_APP_API_BASE_URL="http://localhost:8000"
+    # IMPORTANT: When deploying, this value MUST be changed to your deployed backend API URL (e.g., [https://your-backend-api.onrender.com](https://your-backend-api.onrender.com))
+    ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4.  **Run the application:**
+    ```bash
+    npm start
+    # or yarn start
+    ```
+    The frontend will open in your browser, usually at `http://localhost:3000`.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Deployment
 
-### Code Splitting
+This frontend is designed to be deployed as a static site on platforms like **Render.com** (as a Static Site), Vercel, or Netlify. Refer to the deployment guide for specific instructions.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
