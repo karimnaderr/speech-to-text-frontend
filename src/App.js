@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react"; // <<< Import useRef
+import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import "./App.css";
 
@@ -9,7 +9,7 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const fileInputRef = useRef(null); // <<< Create a ref for the file input
+  const fileInputRef = useRef(null);
 
   const API_BASE_URL = "http://127.0.0.1:8000";
 
@@ -56,6 +56,7 @@ function App() {
       );
 
       setCurrentTranscript(response.data);
+
       fetchTranscripts();
     } catch (err) {
       console.error("Error uploading file:", err);
@@ -68,8 +69,7 @@ function App() {
       }
     } finally {
       setLoading(false);
-      setSelectedFile(null); // Clear React state
-      // <<< Clear the value of the actual file input element in the DOM
+      setSelectedFile(null);
       if (fileInputRef.current) {
         fileInputRef.current.value = "";
       }
@@ -106,7 +106,7 @@ function App() {
           type="file"
           accept="audio/*"
           onChange={handleFileChange}
-          ref={fileInputRef} // <<< Attach the ref here
+          ref={fileInputRef}
           style={{ display: "block", marginBottom: "15px" }}
         />
         <button
@@ -147,7 +147,7 @@ function App() {
             <p>
               <strong>Sentiment:</strong> {currentTranscript.sentiment}
             </p>{" "}
-            {/* <<< Display Sentiment */}
+            {/* Display Sentiment */}
             <p>
               <strong>Text:</strong> {currentTranscript.text}
             </p>
@@ -192,7 +192,7 @@ function App() {
                 <p>
                   <strong>Sentiment:</strong> {t.sentiment}
                 </p>{" "}
-                {/* <<< Display Sentiment */}
+                {/* Display Sentiment */}
                 <p>
                   <strong>Text:</strong> {t.transcript_text}
                 </p>
